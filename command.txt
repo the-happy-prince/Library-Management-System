@@ -1,0 +1,58 @@
+#Create a database
+CREATE DATABASE libproject;
+
+#Use the database
+USE libproject
+
+--------------------------------
+
+#Creating tables
+
+#1. Account Table
+CREATE TABLE account (
+    -> username VARCHAR(12) PRIMARY KEY,
+    -> name VARCHAR(30) NOT NULL,
+    -> password VARCHAR(8) NOT NULL,
+    -> sec_que VARCHAR(30),
+    -> sec_ans VARCHAR(30));
+
+#2. Book Table
+CREATE TABLE book(
+    -> book_id VARCHAR(12) PRIMARY KEY,
+    -> name VARCHAR(30) NOT NULL,
+    -> isbn VARCHAR(20) UNIQUE,
+    -> publisher VARCHAR(30),
+    -> edition VARCHAR(2),
+    -> price FLOAT,
+    -> pages VARCHAR(5));
+
+#3. Student Table
+CREATE TABLE student (
+    -> student_id VARCHAR(5) PRIMARY KEY,
+    -> name VARCHAR(30) NOT NULL,
+    -> father VARCHAR(30) NOT NULL,
+    -> course VARCHAR(11),
+    -> branch VARCHAR(11),
+    -> year VARCHAR(11),
+    -> semester VARCHAR(11));
+
+#4. Issue Book Table
+CREATE TABLE issue_book (
+    -> book_id VARCHAR(12),
+    -> student_id VARCHAR(5),
+    -> bname VARCHAR(30),
+    -> sname VARCHAR(30),
+    -> course VARCHAR(11),
+    -> branch VARCHAR(11),
+    -> date_of_issue VARCHAR(12));
+
+#5. Return Book Table
+CREATE TABLE return_book ( 
+    -> book_id VARCHAR(12), 
+    -> student_id VARCHAR(5), 
+    -> bname VARCHAR(30), 
+    -> sname VARCHAR(30), 
+    -> course VARCHAR(11), 
+    -> branch VARCHAR(11), 
+    -> date_of_issue VARCHAR(12), 
+    -> date_of_return VARCHAR(12) );
