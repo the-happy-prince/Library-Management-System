@@ -10,11 +10,11 @@ USE libproject
 
 #1. Account Table
 CREATE TABLE account (
-   username VARCHAR(12) PRIMARY KEY,
-   name VARCHAR(30) NOT NULL,
-   password VARCHAR(8) NOT NULL,
-   sec_que VARCHAR(30),
-   sec_ans VARCHAR(30));
+    username VARCHAR(12) PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    password VARCHAR(8) NOT NULL,
+    sec_que VARCHAR(30),
+    sec_ans VARCHAR(30));
 
 #2. Book Table
 CREATE TABLE book(
@@ -55,4 +55,4 @@ CREATE TABLE return_book (
     course VARCHAR(11), 
     branch VARCHAR(11), 
     date_of_issue VARCHAR(12), 
-    date_of_return VARCHAR(12) );
+    date_of_return VARCHAR(12));
